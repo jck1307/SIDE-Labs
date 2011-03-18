@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+
+<model name="lnk:linksmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <description>Links Model</description>
+   <author></author>
+   <version>1.0</version>
+
+   <!-- Imports are required to allow references to definitions in other models -->
+   <imports>
+      <!-- Import Alfresco Dictionary Definitions -->
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+   </imports>
+
+   <namespaces>
+      <namespace uri="http://www.alfresco.org/model/linksmodel/1.0" prefix="lnk"/>
+   </namespaces>
+
+   <types>
+      <type name="lnk:link">
+         <parent>cm:content</parent>
+         <properties>
+            <property name="lnk:title">
+               <title>Link Title</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+            </property>
+            <property name="lnk:url">
+               <title>Link URL</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+            </property>
+            <property name="lnk:description">
+               <title>Link Description</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+            </property>
+         </properties>
+      </type>
+   </types>
+
+   <aspects>
+      <aspect name="lnk:internal">
+         <title>Internal Link</title>
+         <properties>
+            <property name="lnk:isInternal">
+               <title>Is Internal</title>
+               <type>d:text</type>
+               <mandatory>true</mandatory>
+            </property>
+         </properties>
+      </aspect>
+   </aspects>
+</model>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<MindMap:Map xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:MindMap="http://www.bluexml.com/rwm/mindmap/1.0/">
+  <node folded="false" text="Structure d'information">
+    <sub folded="false" text="Nomenclature" id="7Sarf3VL5T">
+      <sub text="Une nomenclature est la liste d'un composant d'un produit.">
+        <font bold="false" italic="true" name="SansSerif" size="10"/>
+      </sub>
+      <sub folded="true" text="quantit� par composant"/>
+    </sub>
+    <sub folded="false" text="Composant" id="T9OM7CuvcS">
+      <sub folded="true" text="description"/>
+      <sub folded="true" text="fournisseur"/>
+      <sub folded="true" text="r�f�rence fournisseur"/>
+      <sub folded="true" text="r�f�rence interne">
+        <sub text="Utile car il peut y avoir diff�rentes ref fournisseurs">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+      </sub>
+    </sub>
+    <sub folded="false" text="Nomenclature ERP" id="1e1eT4uesR">
+      <sub folded="true" text="est stable"/>
+      <sub folded="true" text="quantit� par composant"/>
+    </sub>
+    <sub folded="false" text="Composant ERP" id="cVQ46PIOKe">
+      <sub folded="true" text="description"/>
+      <sub folded="true" text="ref fournisseur"/>
+      <sub folded="true" text="ref interne"/>
+      <sub folded="true" text="fournisseur"/>
+    </sub>
+  </node>
+</MindMap:Map>

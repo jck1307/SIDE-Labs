@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Generation Deployment Dependencies Controller
+Bundle-SymbolicName: com.bluexml.side.Util.dependencies;singleton:=true
+Bundle-Version: 1.0.123.v20372-20100918
+Bundle-Activator: com.bluexml.side.util.dependencies.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.core.runtime,
+ com.bluexml.side.Util.libs,
+ com.bluexml.side.Util.log,
+ com.bluexml.side.Util.maven2.embeded
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.bluexml.side.util.dependencies

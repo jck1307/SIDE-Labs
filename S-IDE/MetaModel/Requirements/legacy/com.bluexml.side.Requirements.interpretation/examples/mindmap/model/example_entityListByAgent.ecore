@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<MindMap:Maps xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:MindMap="http://www.bluexml.com/rwm/mindmap/1.0/">
+  <maps>
+    <node folded="false" text="Responsable industriel - Structure">
+      <sub folded="false" text="Nomenclature ERP" id="1e1eT4uesR">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Nomenclature" id="7Sarf3VL5T">
+        <sub text="Une nomenclature est la liste d'un composant d'un produit.">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Composant" id="T9OM7CuvcS">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence interne">
+          <sub text="Utile car il peut y avoir diff�rentes ref fournisseurs">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Composant ERP" id="cVQ46PIOKe">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+    </node>
+  </maps>
+  <maps>
+    <node folded="false" text="Responsable BE - Structure">
+      <sub folded="false" text="Nomenclature ERP" id="1e1eT4uesR">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="est stable">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Nomenclature" id="7Sarf3VL5T">
+        <sub text="Une nomenclature est la liste d'un composant d'un produit.">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="quantit� par composant">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Composant" id="T9OM7CuvcS">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence interne">
+          <sub text="Utile car il peut y avoir diff�rentes ref fournisseurs">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence interne">
+          <sub text="Utile car il peut y avoir diff�rentes ref fournisseurs">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="r�f�rence fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+      <sub folded="false" text="Composant ERP" id="cVQ46PIOKe">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+    </node>
+  </maps>
+  <maps>
+    <node folded="false" text="Publication dans CAO - Structure">
+      <sub folded="false" text="Nomenclature" id="7Sarf3VL5T">
+        <sub text="Une nomenclature est la liste d'un composant d'un produit.">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+      </sub>
+      <sub folded="false" text="Composant ERP" id="cVQ46PIOKe">
+        <sub text="">
+          <font bold="false" italic="true" name="SansSerif" size="10"/>
+        </sub>
+        <sub folded="true" text="ref interne">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="ref fournisseur">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+        <sub folded="true" text="description">
+          <sub text="">
+            <font bold="false" italic="true" name="SansSerif" size="10"/>
+          </sub>
+        </sub>
+      </sub>
+    </node>
+  </maps>
+</MindMap:Maps>

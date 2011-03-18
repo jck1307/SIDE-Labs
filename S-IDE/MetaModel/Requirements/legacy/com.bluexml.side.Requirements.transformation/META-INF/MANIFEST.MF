@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Requirements Transformation
+Bundle-SymbolicName: com.bluexml.side.Requirements.transformation;singleton:=true
+Bundle-Version: 1.0.16.v9271-20090916
+Bundle-Activator: com.bluexml.side.requirements.transformation.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ fr.obeo.acceleo.chain,
+ fr.obeo.acceleo.ecore,
+ org.eclipse.emf.ecore,
+ fr.obeo.acceleo.tools,
+ org.eclipse.emf.ecore.xmi,
+ fr.obeo.acceleo.gen,
+ org.eclipse.ant.core,
+ org.eclipse.m2m.atl.engine,
+ com.bluexml.side.Util.ecore,
+ com.bluexml.side.Requirements,
+ org.eclipse.m2m.atl.drivers.emf4atl,
+ org.eclipse.m2m.atl.common
+Eclipse-LazyStart: true

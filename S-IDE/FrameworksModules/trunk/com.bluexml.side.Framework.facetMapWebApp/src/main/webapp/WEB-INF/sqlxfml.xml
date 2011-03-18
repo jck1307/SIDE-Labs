@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<facetmap xmlns:cmis="http://www.cmis.org/2008/05" xmlns:alf="http://www.alfresco.com">
+	<resources>
+		<resource title="Employe : BERTRAND Pierre" href="">
+			<map heading="Oui" />
+			<map heading="B" />
+			<map heading="22" />
+		</resource>
+		<resource title="Employe : Cambray Eric" href="">
+			<map heading="Oui" />
+			<map heading="" />
+			<map heading="28" />
+		</resource>
+		<resource title="Employe : TRAN Michael" href="">
+			<map heading="Oui" />
+			<map heading="BB" />
+			<map heading="26" />
+		</resource>
+	</resources>
+	<taxonomy title="Personne.mobilite" root-heading-title="Personne.mobilite"
+		facetid="com.bluexml.demo.rh.Personne.mobilite">
+		<heading id="Mobilité is null" title="Mobilité is null" />
+		<heading id="Oui" title="Oui" />
+		<heading id="Oui" title="Oui" />
+		<heading id="Oui" title="Oui" />
+	</taxonomy>
+	<taxonomy title="Personne.permisB" root-heading-title="Personne.permisB"
+		facetid="com.bluexml.demo.rh.Personne.permisB">
+		<heading id="Permis B is null" title="Permis B is null" />
+		<heading id="B" title="B" />
+		<heading id="" title="" />
+		<heading id="BB" title="BB" />
+	</taxonomy>
+	<taxonomy title="Personne.age" root-heading-title="Personne.age"
+		facetid="com.bluexml.demo.rh.Personne.age">
+		<heading id="Age is null" title="Age is null" />
+		<heading id="22" title="22" />
+		<heading id="28" title="28" />
+		<heading id="26" title="26" />
+	</taxonomy>
+</facetmap>

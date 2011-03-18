@@ -1,0 +1,17 @@
+<projectDescription>
+  <name>repositoryBuilderForSIDE</name>
+  <comment>This project aims to scan SIDE plugin and build an archive of all maven dpendecies used by SIDE this includes frameworks modules</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.maven.ide.eclipse.maven2Builder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+    <nature>org.maven.ide.eclipse.maven2Nature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Alfresco
+Bundle-SymbolicName: com.bluexml.side.Class.service.alfresco
+Bundle-Version: 1.0.30.v23866-20110315
+Bundle-Activator: com.bluexml.side.clazz.service.alfresco.Activator
+Bundle-Vendor: BLUEXML
+Require-Bundle: org.eclipse.core.runtime,
+ com.bluexml.side.Class,
+ com.bluexml.side.Util.libs,
+ fr.obeo.acceleo.gen,
+ com.bluexml.side.Class.modeler
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.bluexml.side.clazz.service.alfresco

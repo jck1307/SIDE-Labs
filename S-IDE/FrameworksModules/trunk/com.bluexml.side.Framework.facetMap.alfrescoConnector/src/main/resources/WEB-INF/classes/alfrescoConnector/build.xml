@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+
+<project name="updtating-Documents" default="main" basedir=".">
+	<property file="build.properties" />
+	<target name="main">
+		<!-- creating the folder for result-->
+		<mkdir dir="${ant.infFolder}" />
+		<!-- getting the file-->
+		<echo message="http://${ant.host}/${ant.CMISurl}?contentType=${ant.contentType}&amp;path=${ant.community}" />
+		<get src="http://${ant.host}/${ant.CMISurl}?contentType=${ant.contentType}&amp;path=${ant.community}" dest="${ant.infFolder}${ant.CMISresult}" username="${ant.usernameAlfresco}" password="${ant.passwordAlfresco}" />
+		
+		<echo message="${ant.infFolder}${ant.CMISresult}" />
+		<echo message="${ant.usernameAlfresco}" />
+		<echo message="${ant.passwordAlfresco}" />
+		<!-- replacing &amp;-->
+		<replaceregexp byline="true">
+			<regexp pattern="&amp;(.*)" />
+			<substitution expression="&amp;amp;\1" />
+			<fileset dir="." includes="${ant.infFolder}${ant.CMISresult}" />
+		</replaceregexp>
+		<!-- making the xslt tranformation-->
+		<xslt basedir="." in="${ant.infFolder}${ant.CMISresult}" out="${ant.Mapname}" processor="trax" style="${ant.infFolder}${ant.xslFolder}cmis2xfml.xsl">
+			<outputproperty name="encoding" value="${ant.encoding}" />
+		</xslt>
+		
+	</target>
+</project>

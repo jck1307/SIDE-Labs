@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.bluexml.side.Common; singleton:=true
+Bundle-Version: 1.0.34.v18663-20100622
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: com.bluexml.side.common,
+ com.bluexml.side.common.impl,
+ com.bluexml.side.common.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.bluexml.side.Util.metaModel.validate,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore
+Eclipse-LazyStart: true

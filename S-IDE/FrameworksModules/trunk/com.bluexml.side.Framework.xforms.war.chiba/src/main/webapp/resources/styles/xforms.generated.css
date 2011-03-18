@@ -1,0 +1,378 @@
+/* BlueXML SIDE - XForms component
+ * Default stylesheet.
+ */
+.xformstdleft {
+	float: left;
+}
+
+.xformstdright {
+	float: right;
+}
+
+.xformstdclear {
+	clear: both;
+}
+
+#chiba-logo {
+	display: none;
+}
+
+#copyright {
+	display: none;
+}
+
+.group {
+	padding: 3px;
+	margin: 3px;
+	background: #ffffff;
+}
+
+.minimal-group {
+	padding: 3px;
+}
+
+.full-group {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+}
+
+.label {
+	color: #515D6B;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+.submit {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+	padding: 0 5px;
+}
+
+span.submit .value {
+	cursor: pointer;
+	font: 98% arial, helvetica, clean, sans-serif;
+}
+
+.full-group div {
+	display: block;
+	padding: 5px 5px 5px 0px;
+}
+
+/* keep the Dojo tabs to their initial look*/
+div.dojoTabLabels-top {
+	padding: 0px;
+}
+
+div.dojoTab {
+	padding: 0 0 0 9px;
+}
+
+.full-group label {
+	width: auto;
+	vertical-align: middle;
+	float: left;
+}
+
+.group-label {
+	font-weight: bold;
+}
+
+.full-repeat {
+	border: thin solid #EEEEEE;
+}
+
+.repeat-index .value {
+	background: none repeat scroll 0 0 transparent;
+}
+
+.input,.textarea,.select1,.select,div.xformstdclear {
+	margin-left: 10px;
+}
+
+.input label,.textarea label,.full-group label {
+	height: 1.3em;
+	width: 180px;
+	padding-right: 5px;
+	text-align: right;
+	margin-top: 4px;
+	overflow: hidden;
+}
+
+div.xformstdclear label {
+	/* align (vertically) bottom line of readonly fields' label with the text*/
+	margin-top: 0px;
+}
+
+div.side_datetime_time label {
+	display: none;
+}
+
+/*
+ * FILE UPLOAD WIDGET
+ */
+.side_upload_filename span {
+	font-size: 8pt;
+	margin-left: 2px;
+}
+
+.upload div {
+	padding: 0px;
+}
+
+/*
+ * SELECTION WIDGETS
+ */
+.side_select_widget .invalid>.alert {
+	margin-left: 32px;
+	margin-top: 54px;
+}
+
+.side_select_widget div {
+	/* the many divs nested in the selection widget leave too much blank space*/
+	padding: 0px;
+}
+
+.side_select_widget,.side_select_search_zone {
+	padding-left: 0px;
+}
+
+.side_select_widget .submit,.side_select_output_zone {
+	margin-left: 190px;
+}
+
+.side_select_list select {
+	width: 320px;
+	overflow-x: scroll;
+	overflow: -moz-scrollbars-horizontal;
+}
+
+.side_select_selected_items,.side_select_selected_item,.side_input_multiple_items
+	{ /* make a visible container for the elements to be selected.*/
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDD;
+	min-width: 150px;
+	min-height: 1.3em;
+	margin-left: 10px;
+}
+
+div.side_select_output_zone,.side_select_feature_search select,.side_select_search_zone,.side_select_widget .submit
+	{ /* vertical space between elements non-first elements*/
+	margin-top: 5px;
+}
+
+.side_select_feature_search .side_select_search_zone {
+	margin-top: 0px;
+}
+
+.side_select_selected_items label,.side_select_output_zone label,.side_select_selected_item label
+	{
+	display: none;
+}
+
+.side_select_trigger_button {
+	margin-left: 8px;
+}
+
+.side_select_search_zone label {
+	font-weight: normal;
+}
+
+.side_select_search_zone img {
+	margin-top: 2px;
+	margin-left: 4px;
+}
+
+.side_select_trigger_img {
+	margin-left: 8px;
+}
+
+.side_select_feature_search .side_select_trigger_img,.side_select_feature_search .side_select_selected_item,.side_select_feature_search .side_select_trigger_button
+	{
+	margin-top: 34px;
+}
+
+.side_select_feature_filter .side_select_trigger_img,.side_select_feature_filter .side_select_selected_items
+	{
+	margin-top: 2px;
+}
+
+.side_select_widget .side_select_trigger_img img {
+	/* adds some space between the vertically stacked icons*/
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+/*
+ * CUSTOM SELECTION WIDGETS
+ */
+.customWidget { /* align with form fields*/
+	margin-left: 10px;
+}
+
+.customWidgetLabel {
+	float: left;
+}
+
+.customWidgetOutput {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDD;
+	min-width: 150px;
+	min-height: 1.3em;
+	float: left;
+}
+
+.customWidgetOutput div {
+	padding: 0px;
+}
+
+.customWidgetOpen {
+	
+}
+
+.customWidgetOpen span {
+	margin-left: 10px;
+}
+
+.customWidgetClose {
+	
+}
+
+.customWidgetClose span {
+	margin-left: 10px;
+}
+
+div.ghost {
+	display: none;
+}
+
+.alive {
+	display: block;
+}
+
+/*
+ * WIDGETS FOR FIELDS WITH THE 'MULTIPLE' PROPERTY
+ */
+.side_input_multiple .invalid>.alert {
+	margin-left: 230px;
+}
+
+.side_input_multiple_items {
+	margin-top: 4px;
+	margin-left: 0px;
+}
+
+.side_input_multiple_items,.side_input_multiple_items div {
+	/* don't make the widget unnecessarily bulky */
+	padding: 0px;
+}
+
+.side_input_multiple_items label {
+	display: none;
+}
+
+.side_input_multiple img {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.side_input_multiple div.xformstdclear {
+	padding: 0px;
+}
+
+.side_multiple_enum select {
+	min-height: 5em;
+	min-width: 150px;
+}
+
+/*
+ * SEARCH WIDGETS
+ */
+.side_search_value label {
+	display: none;
+}
+
+.side_search_value,.side_search_operator {
+	float: left;
+	padding: 0px;
+}
+
+.side_search_value select {
+	min-width: 150px;
+}
+
+.side_search_value div.xsd-boolean {
+	margin-left: 0px;
+}
+
+.side_search_operator select {
+	width: 200px;
+}
+
+.side_search_field {
+	clear: both;
+}
+
+/* make the text in read-only textareas visible when in inline multiple forms */
+.side_ro_textarea span.mediatype-text-html {
+	background: #A7BCFC;
+}
+
+.side_class_form_title>.group-label {
+	display: none;
+}
+
+.side_form_title>.group-label {
+	background: none repeat scroll 0 0 #E3EAEC;
+	border: medium none;
+	overflow: auto;
+	font-size: 120%;
+	color: #515D6B;
+}
+
+div.side_jsp_footer {
+	text-align: center;
+	width: 100%;
+	border-top: solid 1px #AAA;
+	font-size: 14px;
+	vertical-align: middle;
+	min-height: 1.5em;
+}
+
+div.side_jsp_using {
+	text-align: right;
+	width: 100%;
+	border-top: solid 1px #AAA;
+	font-size: 12px;
+}
+
+a.side_jsp_using:link,a.side_jsp_footer:link {
+	color: #6FF;
+}
+
+.side_horizontal_line {
+	
+}
+
+#side_status_bar {
+	min-height: 1em;
+	font-weight: bold;
+}
+
+div#submitButtons .group-label {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	overflow: auto;
+}
+
+#submitButtons {
+	text-align: right;
+}
+
+#submitButtons.full-group {
+	text-align: right;
+	background: #fff;
+	overflow: visible;
+}

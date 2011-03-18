@@ -1,0 +1,105 @@
+<%--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+--%>
+
+
+<% metamodel http://www.kerblue.org/class/1.0 
+import templates.servicesTemplates.Common
+import com.bluexml.side.clazz.generator.alfresco.api.templates.extJS.services.extJS
+import com.bluexml.side.clazz.service.alfresco.ClassServices 
+import com.bluexml.side.clazz.service.alfresco.CommonServices 
+import com.bluexml.side.clazz.service.alfresco.AttributeServices 
+import com.bluexml.side.clazz.service.alfresco.AssociationServices 
+%> 
+<%script type="clazz.Clazz" name="validatedFilename"%> 
+<%getProperty("extJSProject")%>/library/<%name%>/extJs/json-grouping.js
+<%script type="clazz.Clazz" name="fichierJs" file="<%validatedFilename%>"%> 
+Ext.onReady(function(){
+
+    function size(val){
+        if ((val/1000 > 500) || (val/1000 < 100)){
+            return '<span style="color:red;">' + Math.floor(val/1024) + ' KB</span>';
+        }
+        return '<span style="color:green;">' + Math.floor(val/1024) + ' KB</span>';
+    }
+    
+    function convertSize(val, record){
+    	var reg=new RegExp("(\\s)", "g");
+		return val.replace(reg,"");
+    }
+
+   	/**
+	 * Cette méthode permet de calculer la taille du champ de la propriété
+	 * par default cette méthode retourne 150.
+	 */
+	function calculatePropertySize() {
+		// TODO - completer la methode pour qu'elle retourne la taille du champs en fonction
+		// de son type ou de l'information qu'elle affichera.
+		return 150;
+	}
+
+	function load() {
+	    var reader = new Ext.data.JsonReader({
+	        root: 'records',
+	        fields: [
+				'id',
+		        <%for (getAllSortedAttibutes()){%>
+		        {name: '<%getQualifiedName()%>', type: '<%getExtJSType()%>'}<%if (i() <current("Clazz").getAllSortedAttibutes().nSize() -1){%>, <%}%>
+		        <%}%>
+	    	]
+	    });
+	
+	    var store = new Ext.data.GroupingStore({
+	    	url:getDataSource('json',_TICKET, '/alfresco/service/com/bluexml/side/contentType/<%getRootContainer().name%>/<%getQualifiedName()%>'),
+	        autoLoad:true,
+	        reader:reader,
+	        groupField:'<%if (getClassAndAspectAttributes().nSize() > 0){%><%getClassAndAspectAttributes().nGet(0).getQualifiedName()%><%}else{%>id<%}%>'
+	    });
+	
+	    // create the Grid
+	    var grid = new Ext.grid.GridPanel({
+	        store: store,
+	        columns: [
+	            {id:'id',header: 'Identifier', width: 160, sortable: true, dataIndex: 'id', hidden:true, groupable: false},
+	            <%for (getClassAndAspectAttributes()){%>
+		        {id:'_<%name%>',header: '<%name%>', width: calculatePropertySize(), sortable: true, hidden: false, dataIndex: '<%getQualifiedName()%>'}<%if (i() < current("Clazz").getClassAndAspectAttributes().nSize() -1){%>, <%}%>
+		        <%}%>
+	        ],
+	        view: new Ext.grid.GroupingView({
+	            forceFit:true,
+	            groupTextTpl: '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})'
+	        }),
+	        stripeRows: true,
+	        autoExpandColumn: false,
+	        height: 350,
+	        width: '100%',
+	        title: 'Grouping',
+	        fbar  : ['->', {
+	            text:'Clear Grouping',
+	            iconCls: 'icon-clear-group',
+	            handler : function(){
+	                store.clearGrouping();
+	            }
+	        }] 
+	    });
+	    
+	    // render the grid to the specified div in the page
+	    grid.render('<%name%>_grid-example-grouping');
+	}
+	
+	loadWithAuthentication(load);
+});

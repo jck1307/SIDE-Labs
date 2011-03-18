@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<feature id="com.bluexml.side.Application.feature" label="SIDE Application Modeler" version="1.0.156.v23623-20110311" provider-name="BlueXML">
+  <description url="http://www.bluexml.com">SIDE MDA environment eases the development of extensions on specialized frameworks like Alfresco. This feature allows to model the MDA process (modeling, generation, deployment).</description>
+  <copyright url="http://www.example.com/copyright">[Enter Copyright Description here.]</copyright>
+  <license url="http://www.example.com/license">[Enter License Description here.]</license>
+  <requires>
+    <import plugin="org.eclipse.core.runtime" />
+    <import plugin="org.eclipse.emf.ecore" />
+    <import plugin="com.bluexml.side.Application" />
+    <import plugin="org.eclipse.emf.edit" />
+    <import plugin="org.eclipse.core.resources" />
+    <import plugin="com.bluexml.side.Application.edit" />
+    <import plugin="org.eclipse.emf.ecore.xmi" />
+    <import plugin="org.eclipse.emf.edit.ui" />
+    <import plugin="org.eclipse.ui.ide" />
+    <import plugin="org.eclipse.ui" />
+  </requires>
+  <plugin id="com.bluexml.side.Application" download-size="0" install-size="0" version="1.0.48.v20687-20100930" unpack="false" />
+  <plugin id="com.bluexml.side.Application.edit" download-size="0" install-size="0" version="1.0.38.v20461-20100922" unpack="false" />
+  <plugin id="com.bluexml.side.Application.editor" download-size="0" install-size="0" version="1.0.29.v20461-20100922" unpack="false" />
+  <plugin id="com.bluexml.side.Application.ui" download-size="0" install-size="0" version="1.0.152.v23623-20110311" unpack="false" />
+  <plugin id="com.bluexml.side.Application.startup" download-size="0" install-size="0" version="1.0.17.v18663-20100622" unpack="false" />
+</feature>
+

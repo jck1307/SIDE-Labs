@@ -1,0 +1,124 @@
+/*
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+
+package com.bluexml.side.Integration.alfresco.sql.synchronization.pathManagement;
+
+import java.io.Serializable;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.alfresco.model.ContentModel;
+import org.alfresco.repo.transaction.TransactionListener;
+import org.alfresco.service.cmr.repository.NodeRef;
+import org.alfresco.service.cmr.repository.NodeService;
+import org.alfresco.service.cmr.repository.Path;
+import org.alfresco.service.namespace.NamespaceService;
+import org.alfresco.service.namespace.QName;
+import org.apache.log4j.Logger;
+
+import com.bluexml.side.Integration.alfresco.sql.synchronization.common.JdbcTransactionListener;
+import com.bluexml.side.Integration.alfresco.sql.synchronization.common.NodeHelper;
+import com.bluexml.side.Integration.alfresco.sql.synchronization.dialects.SynchronizationDialect;
+import com.bluexml.side.Integration.alfresco.sql.synchronization.dictionary.DatabaseDictionary;
+
+public class PathServiceImpl implements PathService {
+
+	private Logger logger = Logger.getLogger(getClass());
+
+	public void updatePath(NodeRef nodeRef) {
+		Path path = nodeService.getPath(nodeRef);
+		List<String> sqlQueries = new ArrayList<String>();
+		String escapedPathString = synchronizationDialect.quoteString(synchronizationDialect.escape(path.toPrefixString(namespaceService)));
+		
+		List<QName> parentNames = nodeHelper.getParentAndSelfQNames(nodeRef);
+
+		for (QName type_qname : parentNames) {
+			String type_name = type_qname.getLocalName();
+
+			String simplified_type_name = databaseDictionary.resolveClassAsTableName(type_name);
+			Serializable dbid = nodeService.getProperty(nodeRef, ContentModel.PROP_NODE_DBID);
+	
+			String sqlQuery = String.format("UPDATE %1$s SET %2$s = %3$s WHERE id = %4$s", 
+					simplified_type_name, 
+					PathManagementCommon.PATH_COLUMN_NAME, 
+					escapedPathString, 
+					dbid
+			);
+			sqlQueries.add(sqlQuery);
+
+		}
+
+		executeSQLQuery(sqlQueries);
+
+	}
+
+	
+	/*
+	 * Helper methods
+	 */
+	private void executeSQLQuery(List<String> sqlQueries) {
+		try {
+			transactionListener.executeSQLQuery(sqlQueries);
+		} catch (SQLException e) {
+			throw new PathServiceFailureException(e);
+		}
+	}
+	
+	/*
+	 * Spring IoC/DI material
+	 */
+	
+	private JdbcTransactionListener transactionListener;
+	private NodeService nodeService;
+	private NamespaceService namespaceService;
+	private DatabaseDictionary databaseDictionary;
+	private NodeHelper nodeHelper;
+	private SynchronizationDialect synchronizationDialect;
+
+
+	public void setNodeService(NodeService nodeService_) {
+		nodeService = nodeService_;
+	}
+	
+	public void setNamespaceService(NamespaceService namespaceService_) {
+		namespaceService = namespaceService_;
+	}
+
+	public void setTransactionListener(TransactionListener transactionListener_) {
+		if (! (transactionListener_ instanceof JdbcTransactionListener) ) {
+			logger.error("NodeServiceImpl needs a JdbcTransactionListener since implementation is relative to sql synchronization");
+		}
+		transactionListener = (JdbcTransactionListener) transactionListener_;
+	}
+	
+	public void setDatabaseDictionary(DatabaseDictionary dbd_) {
+		databaseDictionary = dbd_;
+	}
+	
+	public void setNodeHelper(NodeHelper nodeHelper_) {
+		nodeHelper = nodeHelper_;
+	}
+	
+	public void setSynchronizationDialect(SynchronizationDialect synchronizationDialect_) {
+		synchronizationDialect = synchronizationDialect_;
+	}
+
+
+}

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE FacetMap Deployer
+Bundle-SymbolicName: com.bluexml.side.Deployer.facetMap;singleton:=true
+Bundle-Version: 1.0.28.v20461-20100922
+Bundle-Activator: com.bluexml.side.deployer.facetmap.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.core.runtime,
+ com.bluexml.side.Application,
+ com.bluexml.side.Util.deployer,
+ com.bluexml.side.Util.security,
+ com.bluexml.side.Util.deployer.war,
+ com.bluexml.side.Util.componentMonitor
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

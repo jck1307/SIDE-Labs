@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.bluexml.side.Application.com_bluexml_application_configuration">
+      <technology
+            id="demo-webapplication"
+            name="demo">
+         <technologyVersion
+               id="side-demo"
+               version="demo extJS">
+            <deployerVersion
+                  class="com.bluexml.side.deployer.demoapplication.DemoDeployer"
+                  hidden="visible"
+                  id="com.bluexml.side.Deployer.demoWebApplication"
+                  shared="false"
+                  version="Deployer demo webapp">
+               <option
+                     defaultOption="false"
+                     key="com.bluexml.side.Deployer.demoWebApplication.clean"
+                     label="clean">
+               </option>
+               <configurationParameter
+                     dataType="String"
+                     defaultValue="side-demo"
+                     documentation="give the file name of the demo web application default is side-demo"
+                     key="demo.webapplication.name"
+                     label="demo war name">
+               </configurationParameter>
+            </deployerVersion>
+         </technologyVersion>
+      </technology>
+   </extension>
+
+</plugin>

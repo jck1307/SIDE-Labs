@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+
+<!-- Definition of Site Model -->
+
+<model name="st:siteModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <!-- Meta-data about the model -->   
+   <description>Site Model</description>
+   <author>Roy Wetherall</author>
+   <version>1.0</version>
+
+   <!-- Imports are required to allow references to definitions in other models -->   
+   <imports>
+      <!-- Import Alfresco Dictionary Definitions -->
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+   </imports>
+
+   <!-- Sites Namespace -->
+   <namespaces>
+      <namespace uri="http://www.alfresco.org/model/site/1.0" prefix="st"/>
+      <!-- if you want to extend the properties of a site then use this namespace to mark the custom properties -->
+      <namespace uri="http://www.alfresco.org/model/sitecustomproperty/1.0" prefix="stcp"/>
+   </namespaces>
+   
+   <types>
+   
+      <!-- Site Definition:                                                                 -->
+      <!--    - The cm:name property is used to contain the 'short' name of the site        -->
+      <!--    - The titled aspect is used to contain the title and description of the site  -->
+      <!--    - Memberships are managed using the standard permissions mechanism            -->
+      <type name="st:site">
+         <title>Site</title>
+         <parent>cm:folder</parent>         
+         <properties>
+            <property name="st:sitePreset">
+            	<title>Site Preset</title>
+            	<type>d:text</type>        
+            </property>
+            <property name="st:siteVisibility">
+               <title>Site Visibility</title>
+               <type>d:text</type>        
+            </property>
+         </properties>
+         <mandatory-aspects>
+            <aspect>cm:titled</aspect>
+         </mandatory-aspects>
+      </type>
+
+	  <!-- Site Root Folder:                                                               -->
+	  <!--    - all sites are stored beneath the site root folder                           -->
+      <type name="st:sites">
+         <title>Sites</title>
+         <parent>cm:folder</parent>         
+      </type>    
+     
+   </types>
+   
+   <aspects>
+   
+      <!-- Site Container Aspect -->
+      <aspect name="st:siteContainer">
+     	<title>Site Container</title> 	      
+         <properties>
+            <property name="st:componentId">
+            	<title>Component Id</title>
+            	<type>d:text</type>        
+            </property>
+         </properties>
+  	   </aspect>
+  	   
+  	   <!-- Example Custom Site Properties Aspect -->
+      <aspect name="st:customSiteProperties">
+     	<title>Custom Site Properties</title> 	      
+         <properties>
+            <property name="stcp:additionalInformation">
+            	<title>Additional Site Information</title>
+            	<type>d:text</type>        
+            </property>
+         </properties>
+  	   </aspect>
+   
+   </aspects>
+   
+</model>

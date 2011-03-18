@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<?eclipse version="3.0"?>
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+<plugin>
+  <!--   <extension point="org.eclipse.ui.newWizards">-->
+  <!--      <wizard-->
+  <!--            id="com.bluexml.side.requirements.presentation.RequirementsModelWizardID"-->
+  <!--            name="%_UI_RequirementsModelWizard_label"-->
+  <!--            class="com.bluexml.side.requirements.presentation.RequirementsModelWizard"-->
+  <!--            category="com.bluexml.side.modeler.category.ID"-->
+  <!--            icon="icons/Requirements.gif">-->
+  <!--         <description>%_UI_RequirementsModelWizard_description</description>-->
+  <!--         <selection class="org.eclipse.core.resources.IResource"/>-->
+  <!--      </wizard>-->
+  <!--   </extension>-->
+  <extension point="org.eclipse.ui.editors">
+    <editor id="com.bluexml.side.requirements.presentation.RequirementsEditorID" name="%_UI_RequirementsEditor_label" icon="icons/full/obj16/RequirementsModelFile.gif" extensions="requirements" class="com.bluexml.side.requirements.presentation.RequirementsEditor" contributorClass="com.bluexml.side.requirements.presentation.RequirementsActionBarContributor" />
+  </extension>
+</plugin>
+

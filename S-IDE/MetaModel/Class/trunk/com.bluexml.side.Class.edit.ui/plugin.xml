@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.eclipse.ui.popupMenus">
+    <objectContribution id="com.bluexml.side.Class.edit.ui.contribution1" nameFilter="*.dt" objectClass="org.eclipse.core.resources.IFile">
+      <menu id="com.bluexml.side.Class.edit.ui.editor.menu1" label="SIDE" path="additions">
+        <separator name="group1" />
+      </menu>
+      <action class="com.bluexml.side.clazz.edit.ui.actions.InitializeFormModel" enablesFor="1" icon="icons/menu/initializeFormModel.png" id="com.bluexml.side.Class.edit.ui..editor.newAction" label="Initialize Form Model" menubarPath="com.bluexml.side.Class.edit.ui.editor.menu1/group1" />
+      <action class="com.bluexml.side.clazz.edit.ui.actions.InitializeViewModel" enablesFor="1" icon="icons/menu/initializeFormModel.png" id="com.bluexml.side.Class.edit.ui.action1" label="Initialize View Model" menubarPath="com.bluexml.side.Class.edit.ui.editor.menu1/group1" />
+    </objectContribution>
+  </extension>
+</plugin>
+

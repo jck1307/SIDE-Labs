@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<feature id="com.bluexml.side.Class.generator.report.feature" label="SIDE Birt Report Generator" version="1.0.40.v20710-20100930" provider-name="BlueXML">
+  <description url="http://www.bluexml.com">SIDE MDA environment eases the development of extensions on specialized frameworks like Alfresco. This feature is the generator of data models on Birt and Alfresco for content type reporting.</description>
+  <copyright url="http://www.example.com/copyright">[Enter Copyright Description here.]</copyright>
+  <license url="http://www.example.com/license">[Enter License Description here.]</license>
+  <requires>
+    <import plugin="org.eclipse.ui" />
+    <import plugin="org.eclipse.core.runtime" />
+    <import plugin="com.bluexml.side.Application" />
+    <import plugin="com.bluexml.side.Util.deployer" />
+    <import plugin="com.bluexml.side.Util.generator" />
+    <import plugin="com.bluexml.side.Util.generator.acceleo" />
+    <import plugin="com.bluexml.side.Util.security" />
+    <import plugin="com.bluexml.side.Util.generator.alfresco" />
+    <import plugin="org.eclipse.core.resources" />
+    <import plugin="com.bluexml.side.Class.generator.alfresco" />
+    <import plugin="com.bluexml.side.Common" />
+    <import plugin="com.bluexml.side.Class" />
+    <import plugin="com.bluexml.side.Class.modeler" />
+    <import plugin="com.bluexml.side.Util.libs" />
+    <import plugin="com.bluexml.side.Util.dependencies" />
+    <import plugin="com.bluexml.side.Util.componentMonitor" />
+    <import plugin="com.bluexml.side.Util.log" />
+  </requires>
+  <plugin id="com.bluexml.side.Class.generator.report" download-size="0" install-size="0" version="1.0.42.v20710-20100930" unpack="false" />
+</feature>
+

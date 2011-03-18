@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Workflow Model Documentation Generator
+Bundle-SymbolicName: com.bluexml.side.Workflow.generator.documentation;singleton:=true
+Bundle-Version: 1.0.22.v18663-20100622
+Bundle-Activator: com.bluexml.side.workflow.generator.documentation.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.bluexml.side.Util.generator.documentation,
+ org.eclipse.core.resources,
+ com.bluexml.side.Util.generator,
+ com.bluexml.side.Util.generator.acceleo,
+ com.bluexml.side.Util.security,
+ com.bluexml.side.Application,
+ com.bluexml.side.Util.dependencies,
+ com.bluexml.side.Util.componentMonitor
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,44 @@
+-- @atlcompiler atl2006
+module MindMap; -- Module Template
+create OUT : MindMap from IN : RWM;
+
+helper context String def : normalize() : String =
+	self.regexReplaceAll('<([a-zA-Z0-9]*)>(.*)</\\1>','$2').regexReplaceAll('<([a-zA-Z0-9]*)>','')
+	    .regexReplaceAll('&lt;([a-zA-Z0-9]*)>(.*)&lt;/\\1>','$2').regexReplaceAll('&lt;([a-zA-Z0-9]*)>','')
+		.regexReplaceAll('\\\\(.)','$1').regexReplaceAll('&','&amp;').regexReplaceAll('"','&quot;');
+
+rule definition {
+  from s: RWM!RequirementsDefinition
+  to t : MindMap!"Map" (
+	  node <- t_node
+  	),
+	t_node : MindMap!Node (
+		text <- 'Liste des objectifs',
+		sub <- RWM!Goal->allInstances()->reject(goal | goal.refImmediateComposite().oclIsTypeOf(RWM!Goal))
+	)
+}
+
+rule goal {
+	from s : RWM!Goal
+	to t : MindMap!Node (
+		text <- s.name,
+		sub <- s.subgoals
+	)
+}
+
+rule goalWithDocumentation extends goal {
+	from s : RWM!Goal (s.documentation.normalize().size() > 0)
+	to t : MindMap!Node (
+		sub <- Sequence{description}->union(s.subgoals)
+	),
+	description : MindMap!Node (
+		text <- s.documentation.normalize(),
+		presentation <- font_italic
+	),
+	font_italic : MindMap!NodePresentation (
+		bold <- false,
+		italic <- true,
+		size <- 10,
+		name <- 'SansSerif'
+	)
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<feature id="com.bluexml.side.Form.feature" label="SIDE Web Form Modeler" version="1.0.124.v23623-20110311" provider-name="BlueXML">
+  <description url="http://www.bluexml.com">SIDE MDA environment eases the development of extensions on specialized frameworks like Alfresco. This feature is the Eclipse-based tree modeler of web form models.</description>
+  <copyright url="http://www.example.com/copyright">[Enter Copyright Description here.]</copyright>
+  <license url="http://www.example.com/license">[Enter License Description here.]</license>
+  <requires>
+    <import plugin="org.eclipse.core.runtime" />
+    <import plugin="org.eclipse.emf.ecore" />
+    <import plugin="org.eclipse.ocl.ecore" />
+    <import plugin="com.bluexml.side.Class" />
+    <import plugin="com.bluexml.side.Common" />
+    <import plugin="com.bluexml.side.Util.metaModel.validate" />
+    <import plugin="com.bluexml.side.Workflow" />
+    <import plugin="com.bluexml.side.Form" />
+    <import plugin="org.eclipse.emf.edit" />
+    <import plugin="com.bluexml.side.Class.edit" />
+    <import plugin="org.eclipse.ui" />
+    <import plugin="com.bluexml.side.Workflow.edit" />
+    <import plugin="fr.obeo.acceleo.chain" />
+    <import plugin="fr.obeo.acceleo.gen" />
+    <import plugin="com.bluexml.side.Util.libs" />
+    <import plugin="com.bluexml.side.Workflow.editor" />
+    <import plugin="org.topcased.modeler" />
+    <import plugin="com.bluexml.side.Class.editor" />
+    <import plugin="org.eclipse.core.resources" />
+    <import plugin="com.bluexml.side.Form.edit" />
+    <import plugin="org.eclipse.emf.ecore.xmi" />
+    <import plugin="org.eclipse.emf.edit.ui" />
+    <import plugin="org.eclipse.ui.ide" />
+    <import plugin="com.bluexml.side.Workflow.edit" />
+    <import plugin="com.bluexml.side.Form.edit.ui" />
+    <import plugin="com.bluexml.side.Util.generator" />
+    <import plugin="com.bluexml.side.Util.generator.acceleo" />
+    <import plugin="com.bluexml.side.Util.security" />
+    <import plugin="com.bluexml.side.Application" />
+    <import plugin="com.bluexml.side.Util.generator.documentation" />
+    <import plugin="org.eclipse.core.resources" />
+    <import plugin="com.bluexml.side.Util.dependencies" />
+    <import plugin="com.bluexml.side.Util.componentMonitor" />
+    <import plugin="fr.obeo.acceleo.ecore" />
+    <import plugin="fr.obeo.acceleo.tools" />
+  </requires>
+  <plugin id="com.bluexml.side.Form" download-size="0" install-size="0" version="1.0.77.v23623-20110311" unpack="false" />
+  <plugin id="com.bluexml.side.Form.edit" download-size="0" install-size="0" version="1.0.64.v21451-20101103" unpack="false" />
+  <plugin id="com.bluexml.side.Form.edit.ui" download-size="0" install-size="0" version="1.0.77.v23559-20110304" unpack="false" />
+  <plugin id="com.bluexml.side.Form.editor" download-size="0" install-size="0" version="1.0.42.v18663-20100622" unpack="false" />
+  <plugin id="com.bluexml.side.Form.generator.documentation" download-size="0" install-size="0" version="1.0.28.v19922-20100827" unpack="false" />
+</feature>
+

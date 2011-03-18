@@ -1,0 +1,62 @@
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<project name="com.bluexml.side.Integration.alfresco.shareTest" default="package">
+	<property name="extensionFolder" value="${baseDir}/target" />
+	<property name="tmpFolder" value="${extensionFolder}/${module.id}-${module.version}" />
+	<property name="resources" value="${baseDir}/src/main/resources" />
+
+	<property name="classesFolder" value="${extensionFolder}/classes" />
+	<property name="dependencies" value="${extensionFolder}/dependency" />
+	
+	<property name="module.jar" value="${extensionFolder}/${finalName}-classes.jar" />
+	<property name="module.zip" value="${extensionFolder}/${finalName}.zip" />
+
+
+
+	<!-- ================================= 
+          target: buildExtension              
+         ================================= -->
+	<target name="package" depends="" description="build extension archive for alfresco share">
+		<echo message="module id :${module.id}" />
+		<echo message="module version :${module.version}" />
+		<mkdir dir="${classesFolder}" />
+		<mkdir dir="${dependencies}" />
+		<!-- TODO: Insert your custom code -->
+
+		<jar destfile="${module.jar}">
+			<fileset dir="${classesFolder}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<copy todir="${tmpFolder}">
+			<fileset dir="${resources}" />
+		</copy>
+		<zip destfile="${module.zip}" whenempty="skip">
+			<zipfileset dir="${tmpFolder}">
+				<include name="**/*.*" />
+			</zipfileset>
+			<zipfileset dir="${dependencies}" prefix="WEB-INF/lib" >
+				<include name="*.jar" />
+			</zipfileset>
+			<zipfileset file="${module.jar}" prefix="WEB-INF/lib" />
+		</zip>
+	</target>
+
+</project>

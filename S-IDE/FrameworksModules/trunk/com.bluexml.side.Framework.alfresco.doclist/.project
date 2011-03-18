@@ -1,0 +1,13 @@
+<projectDescription>
+  <name>com.bluexml.side.Framework.alfresco.doclist</name>
+  <comment>amp module to enable custom views in AlfrescoShare Document library</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.maven.ide.eclipse.maven2Builder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.maven.ide.eclipse.maven2Nature</nature>
+  </natures>
+</projectDescription>

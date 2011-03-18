@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Application Component Monitor
+Bundle-SymbolicName: com.bluexml.side.Util.componentMonitor;singleton:=true
+Bundle-Version: 1.0.32.v18663-20100622
+Bundle-Activator: com.bluexml.side.util.componentmonitor.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.swt,
+ com.bluexml.side.Util.log,
+ com.bluexml.side.Application,
+ org.eclipse.ui.forms,
+ com.bluexml.side.Util.libs
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: com.bluexml.side.util.componentmonitor;
+  uses:="com.bluexml.side.util.documentation,
+   org.eclipse.swt.custom,
+   org.osgi.framework,
+   com.bluexml.side.util.componentmonitor.headLessinterface,
+   com.bluexml.side.util.documentation.structure.enumeration,
+   org.eclipse.core.runtime,
+   org.eclipse.swt.widgets",
+ com.bluexml.side.util.componentmonitor.guiAdapter,
+ com.bluexml.side.util.componentmonitor.headLessinterface,
+ com.bluexml.side.util.componentmonitor.headless,
+ com.bluexml.side.util.componentmonitor.indy
+Bundle-ActivationPolicy: lazy

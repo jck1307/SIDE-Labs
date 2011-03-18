@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Generator Utilities
+Bundle-SymbolicName: com.bluexml.side.Util.generator
+Bundle-Version: 1.0.68.v21205-20101025
+Bundle-Activator: com.bluexml.side.util.generator.Activator
+Bundle-Vendor: BlueXML
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.bluexml.side.Application,
+ com.bluexml.side.Util.libs,
+ com.bluexml.side.Util.security,
+ com.bluexml.side.Util.log,
+ com.bluexml.side.Util.maven2.embeded,
+ com.bluexml.side.Util.dependencies,
+ com.bluexml.side.Util.componentMonitor
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.bluexml.side.util.generator,
+ com.bluexml.side.util.generator.packager

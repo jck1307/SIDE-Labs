@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>com.bluexml.side.Framework.alfresco.shareFacetMapDashletEnterprise</name>
+	<comment>Declares blueXML repositories and define some options</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

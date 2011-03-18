@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<facetmap xmlns:alf="http://www.alfresco.com" xmlns:cmis="http://www.cmis.org/2008/05">
+    <resources>
+        <resource
+            href="http://localhost:8080/alfresco/d/a/workspace/SpacesStore/be4a179f-b8f9-48e6-9145-376e674f64b5/link-1235747198007_36+http://localhost:8080/share/page/site/base/document-details?nodeRef=workspace://SpacesStore/be4a179f-b8f9-48e6-9145-376e674f64b5"
+            title="No value">
+            <map heading="nullA"/>
+            <map heading="nullB"/>
+            <map heading="nullC"/>
+        </resource>
+    </resources>
+    <taxonomy facetid="com.bluexml.demo.rh.Personne.age" root-heading-title="Personne.age"
+        title="Personne.age">
+        <heading title="nullA" id="nullA"/>
+    </taxonomy>
+    <taxonomy facetid="com.bluexml.demo.rh.Personne.mobilite" root-heading-title="Personne.mobilite"
+        title="Personne.mobilite">
+        <heading title="nullB" id="nullB"/>
+    </taxonomy>
+    <taxonomy facetid="com.bluexml.demo.rh.Personne.permisB" root-heading-title="Personne.permisB"
+        title="Personne.permisB">
+        <heading title="nullC" id="nullC"/>
+    </taxonomy>
+</facetmap>

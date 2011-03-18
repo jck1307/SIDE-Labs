@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<!-- $Id: log4j.xml 3534 2008-09-10 10:14:03Z lars $ -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="SHELL" class="org.apache.log4j.ConsoleAppender">
+        <!--<param name="DatePattern" value="'.'yyyy-MM-dd"/>-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %c %x: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="SHELL"/>
+    </appender>
+
+
+    <!--
+        if you don't want to use the file appender leave it commented,
+        otherwise an empty log file will be created anyway.
+    -->
+    <!--
+
+    <appender name="ROLLING_FILE" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="chiba.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %c %x: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="org.apache.log4j.FileAppender">
+        <param name="File" value="chiba.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %c %x: %m%n"/>
+        </layout>
+    </appender>
+    -->
+
+    <!--
+        change to WARN in production environments
+    -->
+    <category name="org.chiba">
+        <priority value="ERROR"/>
+    </category>
+    <category name="org.bluexml">
+        <priority value="ERROR"/>
+    </category>
+
+    <root>
+        <priority value="WARN"/>
+        <appender-ref ref="ASYNC"/>
+    </root>
+
+</log4j:configuration>

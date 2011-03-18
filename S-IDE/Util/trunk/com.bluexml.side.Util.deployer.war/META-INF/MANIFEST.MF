@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SIDE Alfresco Share Deployer
+Bundle-SymbolicName: com.bluexml.side.Util.deployer.war;singleton:=true
+Bundle-Version: 1.0.35.v18663-20100622
+Bundle-Activator: com.bluexml.side.util.deployer.war.Activator
+Bundle-Vendor: SIDE
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.bluexml.side.Application,
+ com.bluexml.side.Util.deployer,
+ com.bluexml.side.Util.security,
+ com.bluexml.side.Util.libs,
+ com.bluexml.side.Util.componentMonitor,
+ com.bluexml.side.Util.log
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.bluexml.side.util.deployer.war;
+  uses:="com.bluexml.side.util.libs,
+   com.bluexml.side.util.libs.zip,
+   org.osgi.framework,
+   com.bluexml.side.util.deployer,
+   org.eclipse.core.runtime"

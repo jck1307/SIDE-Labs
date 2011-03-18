@@ -1,0 +1,110 @@
+/*
+    Copyright (C) 2007-2011  BlueXML - www.bluexml.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+
+/*!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+function setActiveStyleSheet(title) {
+    var i,
+        a,
+        links = document.getElementsByTagName("link"),
+        len = links.length;
+    for (i = 0; i < len; i++) {
+        a = links[i];
+        if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+            a.disabled = true;
+            if (a.getAttribute("title") == title) a.disabled = false;
+        }
+    }
+}
+
+function getActiveStyleSheet() {
+    var i,
+        a,
+        links = document.getElementsByTagName("link"),
+        len = links.length;
+    for (i = 0; i < len; i++) {
+        a = links[i];
+        if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") && !a.disabled) {
+            return a.getAttribute("title");
+        }
+    }
+    return null;
+}
+
+function getPreferredStyleSheet() {
+    var i,
+        a,
+        links = document.getElementsByTagName("link"),
+        len = links.length;
+    for (i = 0; i < len; i++) {
+        a = links[i];
+        if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("rel").indexOf("alt") == -1 && a.getAttribute("title")) {
+            return a.getAttribute("title");
+        }
+    }
+    return null;
+}
+
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    } else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=",
+        ca = document.cookie.split(';'),
+        i,
+        c,
+        len = ca.length;
+    for ( i = 0; i < len; i++) {
+        c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1, c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
+
+window.onload = function (e) {
+    var cookie = readCookie("style");
+    var title = cookie ? cookie : getPreferredStyleSheet();
+    setActiveStyleSheet(title);
+}
+
+window.onunload = function (e) {
+    var title = getActiveStyleSheet();
+    createCookie("style", title, 365);
+}
+
+var cookie = readCookie("style");
+var title = cookie ? cookie : getPreferredStyleSheet();
+setActiveStyleSheet(title);
